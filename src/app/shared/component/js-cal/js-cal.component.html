@@ -1,0 +1,12 @@
+<div class="title">{{monthName}} {{yearNow}}</div>
+
+<div class="calInner">
+  <div class="calHeader">
+    <div class="daysOfWeek" *ngFor="let dayOfWeek of daysOfWeek">{{dayOfWeek}}</div>
+  </div>
+  <div class="calBody">
+    <div class="day" *ngFor="let day of dayArray">
+      <span [ngClass]="{'active': day == dayNow}">{{day}}</span>
+    </div>
+  </div>
+</div>
